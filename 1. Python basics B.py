@@ -5,15 +5,15 @@ pi = math.pi
 
 def circle_length():
     area = int(input('\n '))
-    if area > 0:
-        length = 2 * math.sqrt(math.pi * area)
-        return length
-    else:
-        return "Number should be bigger than 0"
+    try :
+        if area > 0:
+            length = 2 * math.sqrt(math.pi * area)
+            print(length)
+    except:
+        print("Number should be bigger than 0")
 
 def main():
     print('Type area of circle:')
-    result = circle_length()
-    print(result)
+    circle_length()
 
 main()
